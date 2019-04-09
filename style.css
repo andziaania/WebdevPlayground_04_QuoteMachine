@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {  
+  overflow: hidden; /*scrolls of the window turned off*/
+}
+
+* {  
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30rem;
+  height: auto;     /* !!!!!!!!*/
+  border-radius: 3px;
+  padding: 2rem;
+  font-size: 2rem;
+  transition: all 2s ease-out;
+}
+
+#text::before {
+  content: "\f10d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  padding-right: 0.4rem;
+}
+
+#text {
+  animation: fadein 1s;
+}
+@keyframes fadein{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#new-quote {
+  width: 7rem;
+  height: 2rem;
+  background-color: black;
+  border-radius: 3px;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+
+#author {
+  align-self: flex-end;
+  font-size: 1rem;
+  margin-top: 0.7rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.7rem;
+}
